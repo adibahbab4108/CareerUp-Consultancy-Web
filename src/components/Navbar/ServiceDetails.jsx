@@ -1,12 +1,15 @@
-import { useParams } from "react-router-dom";
+import { useRef } from "react";
+import { useLoaderData, useParams } from "react-router-dom";
 
 const ServiceDetails = () => {
-    const {s_name}=useParams()
+    const Data=useLoaderData()
+    console.log(Data)
+    const { id, s_name } = useParams()
 
-console.log(s_name)   
- return (
+    return (
         <div>
-            {s_name}
+            <h2 className="font-semibold text-3xl text-center">{s_name}</h2>
+
         </div>
     );
 };

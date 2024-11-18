@@ -3,6 +3,8 @@ import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
 import ServiceDetails from "../components/Navbar/ServiceDetails";
 import Services from "../components/Navbar/Services";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 const routes = createBrowserRouter([
     {
@@ -22,14 +24,28 @@ const routes = createBrowserRouter([
                     {
                         path: "/category/:category",
                         element: <Services />,
-                        loader: ({params})=>fetch(`/${params.category}.json`)
+                        loader: ({ params }) => fetch(`/${params.category}.json`)
                     },
 
                 ]
             },
             {
-                path: "/service/:s_name",
-                element: <ServiceDetails />
+                path: "/service/:id/:s_name",
+                element: <ServiceDetails />,
+                loader: async ({ params }) => {
+                    const res = await fetch("/all_services.json");
+                    const { services } = await res.json();
+                    const Data = services.find(service => service.id == params.id);
+                    return Data
+                }
+            },
+            {
+                path: "/login",
+                element: <Login />
+            },
+            {
+                path: "/register",
+                element: <Register />
             }
         ]
     },
