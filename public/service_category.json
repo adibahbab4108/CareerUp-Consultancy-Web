@@ -1,0 +1,25 @@
+{
+    "categories": [
+      {
+        "id": 1,
+        "name": "All",
+        "slug": "all_services"
+      },
+      {
+        "id": 2,
+        "name": "Online",
+        "slug": "online"
+      },
+      {
+        "id": 3,
+        "name": "Offline",
+        "slug": "offline"
+      },
+      {
+        "id": 4,
+        "name": "Group",
+        "slug": "group"
+      }
+    ]
+  }
+  

@@ -1,0 +1,113 @@
+{
+    "services": [
+      {
+        "id": 1,
+        "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "service_name": "Career Counseling Sessions",
+        "category": "Online",
+        "description": "One-on-one personalized career counseling to help you identify your strengths, weaknesses, and opportunities.",
+        "pricing": "$50 per session",
+        "duration": "05-12-24 5:00-6:00 PM",
+        "counselor": "Dr. Amanda Smith",
+        "rating": 4.8,
+        "tags": ["Career Development", "Personal Growth"]
+      },
+      {
+        "id": 2,
+        "image": "https://plus.unsplash.com/premium_photo-1661779134041-9d618ec4c812?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "service_name": "Resume Review",
+        "category": "Online",
+        "description": "Get your resume professionally reviewed to stand out in the job market.",
+        "pricing": "$30 per review",
+        "duration": "Flexible Timing",
+        "counselor": "Mr. John Doe",
+        "rating": 4.7,
+        "tags": ["Job Applications", "Professional Development"]
+      },
+      {
+        "id": 3,
+        "image": "https://plus.unsplash.com/premium_photo-1681995375820-bccc97d5f75a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "service_name": "Group Career Counseling",
+        "category": "Group",
+        "description": "Interactive group sessions to explore career paths and opportunities with peers.",
+        "pricing": "$20 per participant",
+        "duration": "07-12-24 3:00-5:00 PM",
+        "counselor": "Ms. Emily Taylor",
+        "rating": 4.5,
+        "tags": ["Networking", "Career Planning"]
+      },
+      {
+        "id": 4,
+        "image": "https://plus.unsplash.com/premium_photo-1661596640509-721f4c2e39ee?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "service_name": "Mock Interview Coaching",
+        "category": "Offline",
+        "description": "Simulated interview sessions with detailed feedback to improve your skills.",
+        "pricing": "$40 per session",
+        "duration": "08-12-24 11:00 AM-12:00 PM",
+        "counselor": "Mr. David Lee",
+        "rating": 4.9,
+        "tags": ["Interview Preparation", "Confidence Building"]
+      },
+      {
+        "id": 5,
+        "image": "https://images.unsplash.com/photo-1641893823219-38b433f736c0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "service_name": "Professional Skills Workshop",
+        "category": "Offline",
+        "description": "A hands-on workshop focusing on essential professional skills like communication and teamwork.",
+        "pricing": "$100 per attendee",
+        "duration": "10-12-24 9:00 AM-3:00 PM",
+        "counselor": "Dr. Sarah Johnson",
+        "rating": 4.6,
+        "tags": ["Skill Development", "Teamwork"]
+      },
+      {
+        "id": 6,
+        "image": "https://pace.oregonstate.edu/sites/default/files/styles/course_banner_large/public/images/course/cover/leadership-coaching.jpg?itok=7UTWAWSw",
+        "service_name": "Leadership Coaching",
+        "category": "Online",
+        "description": "One-on-one coaching to enhance your leadership skills and strategies.",
+        "pricing": "$75 per session",
+        "duration": "11-12-24 4:00-5:30 PM",
+        "counselor": "Dr. Robert Wilson",
+        "rating": 4.7,
+        "tags": ["Leadership", "Executive Coaching"]
+      },
+      {
+        "id": 7,
+        "image": "https://www.maxelearning.com/wp-content/uploads/2018/06/Public-Speaking.jpeg",
+        "service_name": "Public Speaking Workshop",
+        "category": "Offline",
+        "description": "A workshop designed to improve your public speaking and presentation skills.",
+        "pricing": "$60 per participant",
+        "duration": "12-12-24 2:00-5:00 PM",
+        "counselor": "Ms. Laura Bennett",
+        "rating": 4.8,
+        "tags": ["Public Speaking", "Confidence"]
+      },
+      {
+        "id": 8,
+        "image": "https://www.oceanfrontrecovery.com/wp-content/uploads/2019/12/stress-management-techniques.jpg",
+        "service_name": "Stress Management Counseling",
+        "category": "Online",
+        "description": "Guidance and techniques to manage stress and improve mental well-being.",
+        "pricing": "$45 per session",
+        "duration": "13-12-24 6:00-7:00 PM",
+        "counselor": "Dr. Evelyn Carter",
+        "rating": 4.6,
+        "tags": ["Stress Management", "Mental Health"]
+      },
+      {
+        "id": 9,
+        "image": "https://www.4cornerresources.com/wp-content/uploads/2022/05/team-building-ideas-scaled.jpeg",
+        "service_name": "Team Building Workshop",
+        "category": "Group",
+        "description": "A workshop to foster teamwork and collaboration within organizations.",
+        "pricing": "$150 per group",
+        "duration": "14-12-24 10:00 AM-2:00 PM",
+        "counselor": "Mr. James Anderson",
+        "rating": 4.9,
+        "tags": ["Teamwork", "Collaboration"]
+      }
+    ]
+  }
+  
