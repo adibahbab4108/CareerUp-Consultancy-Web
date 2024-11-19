@@ -5,6 +5,8 @@ import ServiceDetails from "../components/Navbar/ServiceDetails";
 import Services from "../components/Navbar/Services";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import PrivateRoute from "./PrivateRoute";
+import NotFound from "../components/NotFound";
 
 const routes = createBrowserRouter([
     {
@@ -31,7 +33,10 @@ const routes = createBrowserRouter([
             },
             {
                 path: "/service/:id/:s_name",
-                element: <ServiceDetails />,
+                element:
+                    <PrivateRoute>
+                        <ServiceDetails />
+                    </PrivateRoute>,
                 loader: async ({ params }) => {
                     const res = await fetch("/all_services.json");
                     const { services } = await res.json();
@@ -51,7 +56,7 @@ const routes = createBrowserRouter([
     },
     {
         path: "*",
-        element: <h1> Error Kaise kono ek jaigai</h1>
+        element: <NotFound/>
     }
 ])
 export default routes;

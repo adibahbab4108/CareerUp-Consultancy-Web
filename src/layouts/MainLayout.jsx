@@ -1,7 +1,9 @@
-import { Outlet, useLoaderData } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Navbar/Footer";
-import Home from "../pages/Home";
+import { ToastContainer } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const MainLayout = () => {
@@ -14,12 +16,25 @@ const MainLayout = () => {
                 </header>
                 <main className="flex-1">
                     <Outlet />
-                    {/* <Home/> */}
                 </main>
                 <footer>
                 </footer>
             </div>
             <Footer />
+            
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+                transition:Zoom
+            />
         </>
     );
 };
