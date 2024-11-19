@@ -21,12 +21,14 @@ const AuthProvider = ({ children }) => {
         return signInWithEmailAndPassword(auth, email, password);
     };
 
-    const logOut = () => {
+    const logOut = async () => {
         setLoading(true);
-        return signOut(auth).catch((error) => {
-            console.error("Logout Error:", error);
+        try {
+            return await signOut(auth);
+        } catch (error) {
+            toast.error("Logout Error:", error);
             setLoading(false);
-        });
+        }
     };
 
     useEffect(() => {

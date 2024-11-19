@@ -1,7 +1,7 @@
 import { Outlet, useLoaderData } from "react-router-dom";
-import Categories from "../components/Navbar/categories";
-import Services from "../components/Navbar/Services";
-import Slider from "../components/Navbar/Slider";
+import Categories from "../components/Categories";
+// import Services from "../components/Services";
+import Slider from "../components/Slider";
 
 const Home = () => {
     const {categories}=useLoaderData()

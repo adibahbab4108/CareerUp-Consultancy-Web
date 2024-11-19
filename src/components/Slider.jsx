@@ -1,10 +1,10 @@
-import slider1 from "../../assets/slider1.png"
-import slider2 from "../../assets/slider2.png"
-import slider3 from "../../assets/slider3.png"
+import slider1 from "../assets/slider1.png"
+import slider2 from "../assets/slider2.png"
+import slider3 from "../assets/slider3.png"
 const Slider = () => {
     return (
         <>
-            <div className="carousel w-full rounded-lg">
+            <div className="carousel rounded-lg">
                 <div id="item1" className="carousel-item w-full">
                     <img
                         src={slider1}
@@ -27,10 +27,10 @@ const Slider = () => {
                 </div>
             </div>
             <div className="flex w-full justify-center gap-2 py-2">
-                <a href="#item1" className="btn btn-xs">1</a>
-                <a href="#item2" className="btn btn-xs">2</a>
-                <a href="#item3" className="btn btn-xs">3</a>
-                <a href="#item4" className="btn btn-xs">4</a>
+                <a href="#item1" className="btn-style1">1</a>
+                <a href="#item2" className="btn-style1">2</a>
+                <a href="#item3" className="btn-style1">3</a>
+                <a href="#item4" className="btn-style1">4</a>
             </div>
         </>
     );

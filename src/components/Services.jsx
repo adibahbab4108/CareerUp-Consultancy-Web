@@ -1,11 +1,8 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import ServiceCard from "./ServiceCard";
-import { useEffect, useState } from "react";
 
 const Services = () => {
-   
     const {services} = useLoaderData()
-    const {category} = useParams()
 
     return (
         <>

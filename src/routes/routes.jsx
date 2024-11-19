@@ -1,8 +1,8 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
-import ServiceDetails from "../components/Navbar/ServiceDetails";
-import Services from "../components/Navbar/Services";
+import ServiceDetails from "../components/ServiceDetails";
+import Services from "../components/Services";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoute";
