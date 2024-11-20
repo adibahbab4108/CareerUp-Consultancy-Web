@@ -13,8 +13,8 @@ const Feedback = () => {
     return (
         <>
             <div>
-                <h2 className="font-bold text-3xl mb-3 text-teal-300 mt-16">Our Clients Review</h2>
-                <div className="bg-gradient-to-r from-gray-900 via-purple-500 to-teal-400 text-white py-4">
+                <h2 className="font-bold text-center text-3xl mb-3 text-teal-300 mt-16">Our Clients Review</h2>
+                <div className="bg-gradient-to-r from-gray-900 via-purple-500 to-teal-400 text-white py-6 mt-6">
 
                     <Marquee
                         gradient={true}

@@ -7,6 +7,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoute";
 import NotFound from "../components/NotFound";
+import MyProfile from "../components/MyProfile";
 
 const routes = createBrowserRouter([
     {
@@ -44,19 +45,25 @@ const routes = createBrowserRouter([
                     return Data
                 }
             },
-            {
-                path: "/login",
-                element: <Login />
-            },
-            {
-                path: "/register",
-                element: <Register />
-            }
+
         ]
     },
     {
+        path: "/login",
+        element: <Login />
+    },
+    {
+        path: "/register",
+        element: <Register />
+    },
+    {
+        path: "/my-profile",
+        element: <MyProfile />
+    },
+
+    {
         path: "*",
-        element: <NotFound/>
+        element: <NotFound />
     }
 ])
 export default routes;

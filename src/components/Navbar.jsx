@@ -54,7 +54,6 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                {/* Navbar End */}
                 <div className="navbar-end flex items-center space-x-4">
                     <div className="text-gray-300 font-semibold">
                         {user && <span>Welcome, {user.displayName}</span>}
@@ -65,20 +64,28 @@ const Navbar = () => {
                         <div className="dropdown ">
                             <div tabIndex={0}>
                                 {user.photoURL ?
-                                    <img className="w-10 rounded-full cursor-pointer" src={user.photoURL} alt="" /> : <FaUserAlt />}
+                                    <img className="w-10 rounded-full cursor-pointer hover:border hover:border-emerald-400" src={user.photoURL} />
+                                    : <FaUserAlt />
+                                }
                             </div>
                             <ul
                                 tabIndex={0}
-                                className=" dropdown-content rounded-xl z-[1] mt-3 w-52 p-2 shadow-lg"// Button  problem ase
+                                className=" dropdown-content rounded-xl z-[]  w-52 p-2  right-0"
                             >
+                                <li>
+                                    <Link 
+                                    className="btn-style1 w-full block"
+                                    to="/my-profile"
+                                    >
+                                        My Profile
+                                    </Link>
+                                </li>
                                 <li>
                                     <Link
                                         to="/"
                                         onClick={logOut}
-                                        className="btn-style1"
-                                    >
+                                        className="btn-style1 w-full block">
                                         Log Out
-
                                     </Link>
                                 </li>
                             </ul>

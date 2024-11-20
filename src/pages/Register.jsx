@@ -1,14 +1,16 @@
 import { useContext, useState } from "react";
-import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
 
     const { createNewUser, setUser, updateUserProfile } = useContext(AuthContext)
     const [error, setError] = useState({})
+    const [show, setShow] = useState(false)
     const navigate = useNavigate()
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
@@ -33,7 +35,7 @@ const Register = () => {
                     .then(() => {
                         navigate("/")
                     })
-                    
+
                 toast.success("User successfully Created")
                 navigate("/login")
             })
@@ -47,53 +49,84 @@ const Register = () => {
 
     return (
         <>
-            <div className="hero bg-base-200 min-h-screen">
-                <div className="card bg-base-100 w-96 shrink-0 shadow-2xl">
+            <div className="hero bg-gradient-to-b from-gray-900 to-gray-800 min-h-screen flex items-center justify-center">
+                <div className="card w-96  rounded-2xl">
+                    <button className="btn-style2 my-3 w-fit" onClick={() => navigate(-1)}>go back</button>
                     <form onSubmit={handleSubmit} className="card-body">
-                        <h1 className="text-2xl font-bold mb-5 text-center">Register to your Account</h1>
+                        <h1 className="text-2xl font-bold mb-5 text-center text-white">Register to your Account</h1>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Name</span>
+                                <span className="label-text text-gray-300">Name</span>
                             </label>
-                            <input type="text" placeholder="Name" name="name" className="input input-bordered" required />
+                            <input
+                                type="text"
+                                placeholder="Name"
+                                name="name"
+                                className="input input-bordered"
+                                required
+                            />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Email</span>
+                                <span className="label-text text-gray-300">Email</span>
                             </label>
-                            <input type="email" placeholder="email" name="email" className="input input-bordered" required />
+                            <input
+                                type="email"
+                                placeholder="email"
+                                name="email"
+                                className="input input-bordered" required
+                            />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">PhotoURL</span>
+                                <span className="label-text text-gray-300">PhotoURL</span>
                             </label>
-                            <input type="text" placeholder="photo_url" name="photo_url" className="input input-bordered" required />
+                            <input
+                                type="text"
+                                placeholder="photo_url"
+                                name="photo_url"
+                                className="input input-bordered"
+                                required
+                            />
                         </div>
-                        <div className="form-control">
+                        <div className="form-control relative">
                             <label className="label">
-                                <span className="label-text">Password</span>
+                                <span className="label-text text-gray-300">Password</span>
                             </label>
-                            <input type="password" placeholder="password" name="password" className="input input-bordered" required />
-                            {error.password && (
-                                <p className="text-red-500">{error.password}</p>
-                            )}
+
+                            <input
+
+                                type={show ? "text" : "password"}
+                                placeholder="password"
+                                name="password"
+                                className="input input-bordered"
+                                required
+                            />
+                            <button className=" absolute right-4 top-12 text-2xl" onClick={() => setShow(!show)}>{show ? <FaEye /> : <FaEyeSlash />}</button>
+
+                            {error.password && <p className="text-red-500">{error.password}</p>}
                         </div>
                         <div className="form-control mt-6">
-                            {error.authError && (
-                                <p className="text-red-500">{error.authError}</p>
-                            )}
-                            <button className="btn btn-primary">Register</button>
+                            {error.authError && <p className="text-red-500">{error.authError}</p>}
+                            <button
+                                className="btn-style2"
+
+                            >
+                                Register
+                            </button>
                             <label className="label">
-                                <span className="label-text">Already have an account? <Link to="/login" className='text-blue-700 font-bold'>Login</Link> </span>
+                                <span className="label-text text-gray-300">
+                                    Already have an account?{" "}
+                                    <Link to="/login" className="text-blue-400 font-bold">
+                                        Login
+                                    </Link>
+                                </span>
                             </label>
-                        </div>
-                        <h4 className="text-center font-bold">Or</h4>
-                        <div className="form-control mt-6">
-                            <button className="btn">Register with <FcGoogle /></button>
                         </div>
                     </form>
                 </div>
             </div>
+
         </>
     );
 };

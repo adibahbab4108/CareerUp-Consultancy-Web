@@ -7,7 +7,7 @@ const ServiceCard = ({ data }) => {
     return (
         <>
             <div className="rounded-xl bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800 shadow-lg p-4 hover:shadow-2xl transition-shadow duration-300">
-                {/* Image Section */}
+
                 <figure className="relative rounded-xl overflow-hidden shadow-inner">
                     <img
                         className="h-80 w-full object-cover rounded-xl transform hover:scale-105 transition-transform duration-300"

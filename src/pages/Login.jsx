@@ -2,9 +2,10 @@ import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import { toast } from 'react-toastify';
+import { FcGoogle } from 'react-icons/fc';
 
 const Login = () => {
-    const { userLogin, setUser } = useContext(AuthContext)
+    const { userLogin, setUser, googleSignIn } = useContext(AuthContext)
 
     const [error, setError] = useState({})
 
@@ -32,14 +33,23 @@ const Login = () => {
             });
 
     }
+    const handleSignWithGoogle = () => {
+        googleSignIn()
+            .then((result) => {
+                const user = result.user;
+                console.log(user)
+
+            })
+    }
     return (
         <>
             <div className="hero bg-gradient-to-b from-gray-900 to-gray-800 min-h-screen flex items-center justify-center">
-                <div className="card bg-gradient-to-r from-gray-800 to-gray-900 w-96 shadow-xl rounded-2xl">
+                <div className="card w-96  rounded-2xl">
+                    <button className="btn-style2 my-3 w-fit" onClick={() => navigate(-1)}>go back</button>
                     <form
                         onSubmit={handleSubmit}
                         className="card-body p-6 rounded-lg bg-gray-800 shadow-inner">
-                        <h1 className="text-3xl font-bold text-center text-white mb-8">Login to Your Account</h1>
+                        <h1 className="text-2xl font-bold text-center text-white mb-8">Login to Your Account</h1>
 
                         <div className="form-control">
                             <label className="label">
@@ -87,6 +97,10 @@ const Login = () => {
                             </label>
                         </div>
                     </form>
+                    <h4 className="text-center font-bold text-white">Or</h4>
+                    <div className="form-control mt-6">
+                        <button onClick={handleSignWithGoogle} className="btn">Login with <FcGoogle /></button>
+                    </div>
                 </div>
             </div>
 

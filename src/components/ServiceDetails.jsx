@@ -4,7 +4,6 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 const ServiceDetails = () => {
     const Data = useLoaderData()
     const { image, description, counselor, category, pricing, rating, service_name, tags } = Data;
-    // console.log(image, description, counselor, category, pricing, rating, service_name, tags);
     const [comments, setComments] = useState([]);
     const [newComment, setNewComment] = useState("");
 

@@ -5,20 +5,22 @@ import { ToastContainer } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 import Feedback from "../components/Feedback";
+import About from "../components/About";
 
 
 const MainLayout = () => {
     return (
         <>
             <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 min-h-screen ">
-                <div className="w-11/12 mx-auto flex flex-col min-h-screen rounded-xl shadow-lg ">
+                <div className="w-11/12 mx-auto  min-h-screen rounded-xl shadow-lg ">
                     <header>
                         <Navbar />
                     </header>
-                    <main className="flex-1 mt-4 p-2">
+                    <main className=" mt-4 p-2">
                         <Outlet />
                     </main>
-                <Feedback/>
+                    <Feedback />
+                    <About/>
                 </div>
                 <Footer />
             </div>
