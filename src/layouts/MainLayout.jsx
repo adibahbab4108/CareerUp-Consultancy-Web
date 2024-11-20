@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import { ToastContainer } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
+import Feedback from "../components/Feedback";
 
 
 const MainLayout = () => {
@@ -17,6 +18,7 @@ const MainLayout = () => {
                     <main className="flex-1 mt-4 p-2">
                         <Outlet />
                     </main>
+                <Feedback/>
                 </div>
                 <Footer />
             </div>

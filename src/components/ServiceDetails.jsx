@@ -1,5 +1,5 @@
-import { useRef, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useState } from "react";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 const ServiceDetails = () => {
     const Data = useLoaderData()
@@ -8,6 +8,8 @@ const ServiceDetails = () => {
     const [comments, setComments] = useState([]);
     const [newComment, setNewComment] = useState("");
 
+    const navigate = useNavigate()
+    
     const handleCommentSubmit = () => {
         if (newComment.trim() !== "") {
             setComments((prev) => [...prev, newComment]);
@@ -18,6 +20,7 @@ const ServiceDetails = () => {
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-800 via-gray-900 to-black p-6 flex items-center justify-center">
             <div className="max-w-5xl  bg-gradient-to-b from-gray-800 to-gray-700 shadow-inner rounded-2xl p-8">
+            <button className="btn-style2 my-3" onClick={() => navigate(-1)}>go back</button>
 
                 <div className="rounded-xl overflow-hidden shadow-lg">
                     <img

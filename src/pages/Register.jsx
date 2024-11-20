@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 
 const Register = () => {
 
-    const { createNewUser, setUser } = useContext(AuthContext)
+    const { createNewUser, setUser, updateUserProfile } = useContext(AuthContext)
     const [error, setError] = useState({})
     const navigate = useNavigate()
     const handleSubmit = (e) => {
@@ -28,6 +28,12 @@ const Register = () => {
             .then((userCredential) => {
                 const user = userCredential.user;
                 setUser(user)
+
+                updateUserProfile({ displayName: name, photoURL: photo, })
+                    .then(() => {
+                        navigate("/")
+                    })
+                    
                 toast.success("User successfully Created")
                 navigate("/login")
             })
@@ -36,6 +42,7 @@ const Register = () => {
                 setError({ ...error, authError: errorMessage })
                 return
             });
+
     }
 
     return (
