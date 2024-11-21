@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+
 const ServiceCard = ({ data }) => {
+  
     const { id, image, service_name, category, description, pricing, rating, counselor, tags } = data;
 
     return (
         <>
-            <div className="rounded-xl bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800 shadow-lg p-4 hover:shadow-2xl transition-shadow duration-300">
+            <div data-aos="fade-up"  className="rounded-xl bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800 shadow-lg p-4 hover:shadow-2xl transition-shadow duration-300">
 
                 <figure className="relative rounded-xl overflow-hidden shadow-inner">
                     <img

@@ -10,4 +10,7 @@
     .btn-style2 {
         @apply px-5 py-2 rounded-lg bg-gradient-to-r from-teal-400 to-blue-600 text-white font-medium shadow hover:shadow-lg transform hover:translate-y-[-2px] transition-all duration-300
     }
+    .hero-gradient{
+        @apply bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900
+    }
 }

@@ -8,7 +8,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="navbar bg-gradient-to-br from-gray-800 to-gray-900 shadow-lg rounded-xl px-4 py-3">
+            <div className="navbar hero-gradient shadow-lg rounded-xl px-4 py-3">
 
                 <div className="navbar-start">
                     <div className="dropdown">

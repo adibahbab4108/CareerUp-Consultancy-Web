@@ -37,13 +37,13 @@ const Login = () => {
         googleSignIn()
             .then((result) => {
                 const user = result.user;
-                console.log(user)
+                // console.log(user)
 
             })
     }
     return (
         <>
-            <div className="hero bg-gradient-to-b from-gray-900 to-gray-800 min-h-screen flex items-center justify-center">
+            <div className="hero hero-gradient min-h-screen flex items-center justify-center">
                 <div className="card w-96  rounded-2xl">
                     <button className="btn-style2 my-3 w-fit" onClick={() => navigate(-1)}>go back</button>
                     <form

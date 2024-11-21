@@ -9,7 +9,7 @@ const Feedback = () => {
             .then(res => res.json())
             .then(data => setSserFeedbacks(data.feedbacks))
     }, [])
-    console.log(userFeedbacks)
+    // console.log(userFeedbacks)
     return (
         <>
             <div>
